@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ganada/info/infoButton.dart';
+import 'package:ganada/loading/analysisLoadingPage.dart';
 
 class SurveyPage extends StatefulWidget {
   final int page;
@@ -147,7 +148,7 @@ class _SurveyPage extends State<SurveyPage> {
                 onPressed: () {
                   if (widget.page == 10) {
                     Navigator.of(context).push(
-                     MaterialPageRoute(builder: (BuildContext context) => SurveyPage(page: -1))
+                     MaterialPageRoute(builder: (BuildContext context) => AnalysisLoadingPage())
                   );
                   }
                   else {
