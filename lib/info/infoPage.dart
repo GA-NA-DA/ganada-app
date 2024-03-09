@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ganada/info/infoButton.dart';
+import 'package:ganada/survey/surveyPage.dart';
 
 class InfoPage extends StatefulWidget {
   @override
@@ -115,16 +116,18 @@ class _InfoPageState extends State<InfoPage> {
               right: 'X',
               onSelectButton: handleDisabilityButtonSelect,
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 70),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                minimumSize: const Size.fromHeight(50),
+                minimumSize: const Size.fromHeight(70),
                 backgroundColor: Color.fromARGB(255, 0, 163, 73),  
                 surfaceTintColor: Color.fromARGB(255, 0, 163, 73),    
                 foregroundColor: Colors.white,
               ),
               onPressed: () {
-                // 다음 페이지로 이동하거나 다음 단계로 진행하는 로직 작성
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) => SurveyPage(page: 1)),
+                );
               },
               child: Text('다음으로'),
             ),
