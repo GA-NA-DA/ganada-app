@@ -24,7 +24,10 @@ class _LoadingPage extends State<LoadingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Image.asset('../../web/icons/Icon-192.png'),
+        child: Container(
+          width: 400,
+          child: Image.asset('../../assets/ganada.png'),
+        )
       ),
     );
   }

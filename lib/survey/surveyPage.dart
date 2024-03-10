@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ganada/info/infoButton.dart';
 import 'package:ganada/loading/analysisLoadingPage.dart';
+import 'dart:io';
 
 class SurveyPage extends StatefulWidget {
   final int page;
@@ -12,14 +13,25 @@ class SurveyPage extends StatefulWidget {
 }
 
 class _SurveyPage extends State<SurveyPage> {
+  String filePath = '../../assets/data.json';
+
+  _SurveyPage() {
+    try {
+      File file = File(filePath);
+      String jsonData = file.readAsString() as String;
+      print(jsonData);
+    } catch (e) {
+      print('파일을 읽어오는데 실패했습니다: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 0, 163, 73),
+      backgroundColor: Color(0xff5DB075),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 163, 73),
-        foregroundColor: Color.fromARGB(255, 0, 163, 73),
+        backgroundColor: Color(0xff5DB075),
+        foregroundColor: Color(0xff5DB075),
         centerTitle: true,
         title: 
           Column(children: [
@@ -32,7 +44,7 @@ class _SurveyPage extends State<SurveyPage> {
               ),
             ),
             Text(
-        '[${widget.page}/10]',
+        '(${widget.page}/10)',
         style: TextStyle(
           color: Colors.black,
           fontSize: 13,
@@ -44,41 +56,22 @@ class _SurveyPage extends State<SurveyPage> {
         padding: EdgeInsets.all(15),
         child: Column(
           children: [
-            SizedBox(height: 30),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 80,
-                  padding: EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 0, 129, 58),
-                    borderRadius: BorderRadius.circular(100)),
-                  child: Text(
-                    "",
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: Colors.white
-                    ),
-                    ),
-                ),
-                SizedBox(width: 30),
-                Container(
-                  width: 350,
-                  padding: EdgeInsets.all(16),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 0, 129, 58),
-                    borderRadius: BorderRadius.circular(5)),
+            SizedBox(height: 20),
+            Container(
+              width: 400,
+              height: 100,
+              padding: EdgeInsets.all(16),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  color: Color(0xff4B9460),
+                  borderRadius: BorderRadius.circular(20)),
                   child: Text(
                     "쉬는 날이면 나는...",
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: Colors.white
-                    ),
-                    ),
-                )
-              ],
+                  style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.white
+                ),
+              ),
             ),
             SizedBox(height: 30),
             Container(
@@ -128,8 +121,8 @@ class _SurveyPage extends State<SurveyPage> {
                 ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   fixedSize: Size(200, 70),
-                  backgroundColor: Color.fromARGB(255, 0, 129, 58),  
-                  surfaceTintColor: Color.fromARGB(255, 0, 129, 58),     
+                  backgroundColor: Color(0xff4B9460),  
+                  surfaceTintColor: Color(0xff4B9460),     
                   foregroundColor: Colors.white,
                 ),
                 onPressed: () {
@@ -141,8 +134,8 @@ class _SurveyPage extends State<SurveyPage> {
                 ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   fixedSize: Size(200, 70),
-                  backgroundColor: Color.fromARGB(255, 0, 129, 58),  
-                  surfaceTintColor: Color.fromARGB(255, 0, 129, 58),     
+                  backgroundColor: Color(0xff4B9460),  
+                  surfaceTintColor: Color(0xff4B9460),     
                   foregroundColor: Colors.white,
                 ),
                 onPressed: () {

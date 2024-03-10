@@ -120,8 +120,8 @@ class _InfoPageState extends State<InfoPage> {
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size.fromHeight(70),
-                backgroundColor: Color.fromARGB(255, 0, 163, 73),  
-                surfaceTintColor: Color.fromARGB(255, 0, 163, 73),    
+                backgroundColor: Color(0xff5DB075),  
+                surfaceTintColor: Color(0xff5DB075),    
                 foregroundColor: Colors.white,
               ),
               onPressed: () {
@@ -134,7 +134,7 @@ class _InfoPageState extends State<InfoPage> {
             SizedBox(height: 16),
             Container(
               alignment: Alignment.center, 
-              child: Text('이미 계정이 있습니다', style: TextStyle(color: Color.fromARGB(255, 0, 163, 73),),)
+              child: Text('이미 계정이 있습니다', style: TextStyle(color: Color(0xff5DB075),),)
             )
           ],
         ),

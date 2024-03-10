@@ -45,7 +45,7 @@ class _InfoButton extends State<InfoButton> {
               child: Text(
               widget.left,
               style: TextStyle(
-                color: selectedButton == 'O' ? Color.fromARGB(255, 0, 163, 73) : Colors.white, // O 버튼 선택 여부에 따라 텍스트 색상 변경
+                color: selectedButton == 'O' ? Color(0xff5DB075) : Colors.white, // O 버튼 선택 여부에 따라 텍스트 색상 변경
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
               ),
@@ -74,7 +74,7 @@ class _InfoButton extends State<InfoButton> {
               child: Text(
               widget.right,
               style: TextStyle(
-                color: selectedButton == 'X' ? Color.fromARGB(255, 0, 163, 73) : Colors.white, // X 버튼 선택 여부에 따라 텍스트 색상 변경
+                color: selectedButton == 'X' ? Color(0xff5DB075) : Colors.white, // X 버튼 선택 여부에 따라 텍스트 색상 변경
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
               ),
